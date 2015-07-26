@@ -18,3 +18,15 @@ I'm usign swagger to generate the API documentation http://swagger.io/
 ```
 http://localhost:8080/swagger-ui.html
 ```
+
+DEMO
+
+Documentation
+```
+http://s3client-env.elasticbeanstalk.com/swagger-ui.html
+```
+
+AngularJs client
+```
+http://s3client-env.elasticbeanstalk.com
+```

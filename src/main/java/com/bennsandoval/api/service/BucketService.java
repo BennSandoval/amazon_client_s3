@@ -122,7 +122,11 @@ public class BucketService {
         return s3client.generatePresignedUrl(request);
     }
 
-    public List<String> deleteFile(String bucketName, String fileName) {
+    public List<String> deleteFile(String bucketName, String fileName) throws ServiceException {
+
+        if(fileName.toLowerCase().contains(".war")){
+            throw new ServiceException("Sorry, we have a restriction for WAR files.");
+        }
 
         AmazonS3Client s3client = null;
         List<String> result = new ArrayList<String>();
